@@ -4,7 +4,6 @@
 </template>
 
 <script lang="ts">
-import axios from 'axios'
 import { ref, toRefs } from 'vue'
 
 export default {
