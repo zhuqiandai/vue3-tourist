@@ -1,6 +1,7 @@
 <template>
   <div>
     Profile
+    <router-link to="{name:'Home'}">About</router-link>
   </div>
 </template>
 

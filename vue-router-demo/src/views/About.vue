@@ -1,5 +1,27 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <contect-list>
+      <template #default="{props}">
+        {{ props.username }}
+      </template>
+      <template #email="{email}">
+        {{ email }}
+      </template>
+    </contect-list>
   </div>
 </template>
+
+<script>
+import ContectList from '@/components/ContectList.vue'
+
+export default {
+  components: {
+    ContectList,
+  },
+  setup() {
+    return { ContectList }
+  },
+}
+</script>
+
+<style lang="scss" scoped></style>

@@ -10,16 +10,19 @@
 import { defineComponent } from 'vue'
 import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
 import router from '../router'
+import { onBeforeRouteUpdate } from 'vue-router'
 
 export default defineComponent({
   name: 'Home',
   components: {
     HelloWorld,
   },
-  setup() {
+  setup(props) {
     const pushRouter = () => {
       router.push('/dashboard')
     }
+
+    console.log(props)
     return { pushRouter }
   },
 })
